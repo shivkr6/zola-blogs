@@ -1,0 +1,109 @@
+{% macro head() %}
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+{% if page.title %}
+<meta
+  name="description"
+  content="{{ config.title }} {{ config.description }} {{ page.title }} {{ page.description }}"
+/>
+<title>{{ page.title }}</title>
+{% elif section.title %}
+<meta
+  name="description"
+  content="{{ config.title }} {{ config.description }} {{ section.title }} {{ section.description }}"
+/>
+<title>{{ section.title }}</title>
+{% elif term.name %}
+<meta
+  name="description"
+  content="#{{ term.name }} {{ config.title }} {{ config.description }}"
+/>
+<title>#{{ term.name }}</title>
+{% elif terms %}
+<meta
+  name="description"
+  content="#tags {{ config.title }} {{ config.description }}"
+/>
+<title>#tags</title>
+{% else %}
+<meta
+  name="description"
+  content="{{ config.title }} {{ config.description }}"
+/>
+<title>{{ config.title }}</title>
+
+{% endif %}
+<link rel="icon" href="/{{ config.extra.favicon }}" />
+<link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}" />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/syntax-theme-dark.css"
+  media="(prefers-color-scheme: dark)"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="/syntax-theme-light.css"
+  media="(prefers-color-scheme: light)"
+/>
+{% if config.extra.theme_color != "dark" -%} {% set color = "color/" ~
+config.extra.theme_color ~ ".css" -%}
+<link rel="stylesheet" href="{{ get_url(path=color, cachebust=true) }}" />
+{%- else -%}
+<link
+  rel="stylesheet"
+  href="{{ get_url(path='color/dark.css', cachebust=true) }}"
+/>
+{% endif %} {%- if config.extra.custom_css is defined -%}
+<link
+  rel="stylesheet"
+  href="{{ get_url(path='custom.css', cachebust=true) }}"
+/>
+{% endif %} {{ rss::rss() }}
+<script src="https://kit.fontawesome.com/51d55b4c7d.js" crossorigin="anonymous"></script>
+<script>
+  function resize() {
+    var x = document.getElementById("myLinks");
+    // var y = document.getElementsByClassName("subcontainer")[0];
+    // var nav = document.getElementsByClassName("topnav")[0];
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  // footnote reference backlinks
+  // REMOVE ONCE version >0.18.0 lands
+  window.addEventListener("load", function () {
+    for (const ref of document.getElementsByClassName("footnote-reference")) {
+      const hash = ref.children[0].hash.substring(1);
+      const refhash = "ref:" + hash;
+      ref.id = refhash;
+    }
+
+    for (const footnote of document.getElementsByClassName(
+      "footnote-definition",
+    )) {
+      const hash = footnote.id;
+      const refhash = "ref:" + hash;
+      const backlink = document.createElement("a");
+      backlink.href =
+        'javascript:if (window.location.href.endsWith("#' +
+        hash +
+        '")) history.back()';
+      // To get back by clicking any arrow, use this instead:
+      // backlink.href = 'javascript:if (window.location.href.search("#") >= 0) history.back()';
+      backlink.className = "footnote-backlink";
+      backlink.innerText = "↩";
+      const paras = footnote.children;
+      const lastPara = paras[paras.length - 1];
+      lastPara.appendChild(backlink);
+    }
+  });
+</script>
+
+{% endmacro %}

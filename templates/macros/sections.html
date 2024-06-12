@@ -1,0 +1,24 @@
+{% macro sections (s) %}
+<div class="posts">
+  {% for post in section.pages %}
+  <article>
+    {% if post.updated %}
+    <header lang="en">
+      <time datetime="{{ post.updated }}"
+        >{{ post.updated | date(format="%Y-%m-%d",
+        timezone="Asia/Manila")}}</time
+      >
+      <h3><a href="{{ post.permalink }}">{{ post.title }} (Updated)</a></h3>
+    </header>
+    {% else %}
+    <header lang="en">
+      <time datetime="{{ post.date }}"
+        >{{ post.date | date(format="%Y-%m-%d", timezone="Asia/Manila")}}</time
+      >
+      <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+    </header>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% endmacro %}

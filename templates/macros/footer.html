@@ -1,0 +1,24 @@
+{% macro footer () %} 
+<footer>
+  {% if config.extra.show_masto_social %} follow
+  <a
+    target="_blank"
+    rel="me"
+    href="https://{{ config.extra.masto_url }}/@{{ config.extra.masto_username }}"
+    >{{ config.extra.masto_username }}@{{ config.extra.masto_url }}</a
+  >
+  ⋅ {% else %}
+  <!-- if false then blank -->
+  {% endif %} © 2024
+  <a target="_blank" href="https://codeberg.org/uncomfyhalomacro/gruvbox-v">gruvbox-v</a>
+  ⋅ powered by <a target="_blank" href="https://getzola.org">zola</a> ⋅ theme by
+  <a target="_blank" href="https://codeberg.org/uncomfyhalomacro"
+    >uncomfyhalomacro</a
+  >
+  {% if config.extra.show_site_attribution %} ⋅ Content
+  <a target="_blank" href="{{ config.extra.site_attribution_link }}"
+    >{{ config.extra.site_attribution_title }}</a
+  >
+  {% endif %}
+</footer>
+{% endmacro %}
