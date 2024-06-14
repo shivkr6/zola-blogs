@@ -1,12 +1,6 @@
-# Gruvbox V
+# Blogs
 
-A minimalist gruvbox theme for [Zola][zola].
+Here I will write blogs
 
-## Credit
-
-Thanks to [zerm][zerm] zola theme template, I was able to take inspiration from
-it and used some concepts and code over.
-
-[zola]: https://getzola.org/
-[zerm]: https://github.com/ejmg/zerm
-
+## Theme Credit
+https://codeberg.org/uncomfyhalomacro/gruvbox-v.git
