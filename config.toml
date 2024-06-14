@@ -52,7 +52,7 @@ show_author = false
 
 show_tags = true
 
-show_masto_social = true
+show_masto_social = false
 masto_url = "julialang.social"
 masto_username = "shivkr6"
 show_site_attribution = true
