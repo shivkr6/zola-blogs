@@ -10,7 +10,7 @@ draft = false
 ## Single Variable Calculus
 
 I'm going to use Short Calculus by Serge Lang for doing [Single Variable Calculus](https://link.springer.com/book/10.1007/978-1-4613-0077-9).
-I chose this textbook because I didn't want to slog through books that are 1000 pages long. It's only 272 pages.it is 
+I chose this textbook because I didn't want to slog through books that are 1000 pages long. It's only 272 pages. It is 
 intended to be a first course in calculus for students with a weak background in mathematics, but it doesn't abandon the 
 rigor.
 
@@ -23,4 +23,4 @@ Before we dive deep into Single Variable Calculus, we will refresh our Algebra a
 I would recommend you do [Limits](https://tutorial.math.lamar.edu/Classes/CalcI/limitsIntro.aspx) up to
 [2.9](https://tutorial.math.lamar.edu/Classes/CalcI/Continuity.aspx) from him. 
 
-We can now start working through the book! :) 
+We can now start working through the book! :)

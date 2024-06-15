@@ -19,6 +19,7 @@
   {% endfor -%} {% endif %}
   <div id="myLinks">
     <!-- insert more_sections here -->
+
     {% for nav in mynavs.subsections %} {% set navmd = get_section(path=nav,
     metadata_only=true) %} {% if navmd.path == "/blog/" %} {% else %}
     <a href="{{ navmd.permalink | safe }}"

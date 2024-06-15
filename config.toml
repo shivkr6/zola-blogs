@@ -73,13 +73,13 @@ theme_variant = "light"
 # Other sections not mentioned
 # If path is not provided, it defaults to `content/<name>/_index.md`
 # more_sections = [
-  # { name = "notes" },
-  # { name = "lecture" }
+#   { name = "contact" },
 # ]
 
 # number_to_show = 3
 
-show_external_links = true
+show_external_links = false
 
 external_links = [
+  { name="contact", description = "contact me", permalink = "/contact/" },
 ]
