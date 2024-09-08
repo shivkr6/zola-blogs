@@ -23,10 +23,10 @@ It starts with Numbers and Functions, goes over Graphs and Curves, and after tha
 I love how he first gives examples as a stepping stone and then generalizes them. This book is methodical and well written.
 
 Before we dive deep into Single Variable Calculus, we will refresh our Algebra and Trigonometry and also learn Limits from
-[Paul's Online Math Notes](https://tutorial.math.lamar.edu/). These are some excellent notes for our purpose. Do the 
+[Paul's Online Math Notes](https://tutorial.math.lamar.edu/). These are some excellent notes for that purpose. Do the 
 [Algebra Trig Review](https://tutorial.math.lamar.edu/Extras/AlgebraTrigReview/AlgebraTrig.aspx) if you need it. 
 I would recommend you do [Limits](https://tutorial.math.lamar.edu/Classes/CalcI/limitsIntro.aspx) up to
-[2.9](https://tutorial.math.lamar.edu/Classes/CalcI/Continuity.aspx) from him. 
+[2.9](https://tutorial.math.lamar.edu/Classes/CalcI/Continuity.aspx). 
 
 ## Multivariable Calculus
 
