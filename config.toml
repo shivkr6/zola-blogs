@@ -12,7 +12,6 @@ build_search_index = true
 
 minify_html = true
 
-generate_feed = true
 
 ignored_content = ["*/**/*.zk/*"]
 
